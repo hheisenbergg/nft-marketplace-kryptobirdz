@@ -1,0 +1,33 @@
+* {
+    box-sizing : border-box;
+}
+
+/*styling the background image and sites*/
+body {
+    background-image: url(../img/lilac.jpg);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+
+}
+
+/*creating styles for all of our links*/
+a {
+    color: #FFFFFF; 
+    transition: all 0.2s;
+    font-size: 20px;
+}
+
+/*creating opacity when we hover over the link*/
+a:hover {
+    opacity: 0.6;
+}
+
+a:active {
+    opacity: 1;
+}
