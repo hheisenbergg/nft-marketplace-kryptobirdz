@@ -69,11 +69,14 @@ export default function AccountDashboard() {
 
   
   if(loadingState === 'loaded' && !nfts.length) return (<h1
-    className='px-20 py-7 text-4x1'>You have not created any NFTs yet...Get set GO !!!</h1>)
+    className='px-20 py-7 text-4xl'><b>You have not created any NFTs yet...Get set GO !!!</b></h1>)
+
+    if(loadingState === 'loaded' && !Unsold.length) return (<h1
+      className='px-50 py-7 text-4xl'><b>Wohooo!!!...You have sold all your NFTs :)</b></h1>)
  
   return (
     <div className='p-4'>
-        <h1 style={{fontSize: '25px' , color:'purple' , position: 'center'}}><b>Unsold NFTs on MarketPlace</b></h1>
+        <h1 style={{fontSize: '25px' , color:'purple' , position: 'center'}}><b>NFTs currently up for sale on MarketPlace</b></h1>
           <div className='px-4' style={{maxWidth : '1400px'}}>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20 pt-4'>
             {
@@ -82,7 +85,7 @@ export default function AccountDashboard() {
                   <img src={nft.image}/>
                   <div className='p-4'>
                     <p style={{height:'64px'}} className='text-3x1 font-semibold'>{nft.name}</p>
-                    <div style={{height: '20px' , overflow: 'hidden'}}>
+                    <div style={{height: '60px' , overflow: 'auto'}}>
                       <p className='text-3x1 font-semibold'><b>{nft.description}</b></p>
                       </div>
                     </div>
@@ -94,11 +97,11 @@ export default function AccountDashboard() {
             }
             </div>
             </div> &nbsp;
-            <div className='px-4' style={{maxWidth : '1400px'}}>
+            {/* <div className='px-4' style={{maxWidth : '1400px' , marginTop : '100px'}}>
                 {
                     Boolean(sold.length) && (
                     <div>
-                     <h1 style={{fontSize: '25px' , color:'purple' , position: 'center'}}><b>Total Sold NFTs</b></h1>
+                     <h1 style={{fontSize: '28px' , color:'purple' , position: 'relative' , left:'200px'}}><b>Total Sold NFTs on the MarketPlace</b></h1>
                         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20 pt-4'>
                     {
                     sold.map((nft , i)=>(
@@ -106,7 +109,7 @@ export default function AccountDashboard() {
                         <img src={nft.image}/>
                         <div className='p-4'>
                             <p style={{height:'64px'}} className='text-3x1 font-semibold'>{nft.name}</p>
-                            <div style={{height: '25px' , overflow: 'hidden'}}>
+                            <div style={{height: '60px' , overflow: 'auto'}}>
                             <p className='text-3x1 font-semibold'><b>{nft.description}</b></p>
                             </div>
                             </div>
@@ -120,7 +123,7 @@ export default function AccountDashboard() {
                      </div>
                     )
                 }
-            </div>
+            </div> */}
     </div>
   )
 }

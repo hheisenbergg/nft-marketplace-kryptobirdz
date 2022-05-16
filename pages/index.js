@@ -75,7 +75,7 @@ export default function Home() {
   }
   //checking if no nfts are left on the Marketplace dislaying Msg
   if(loadingState === 'loaded' && !nfts.length) return (<h1
-    className='px-50 py-7 text-black-4x1'><b>OOPSS!!! No NFTs currently in the MarketPlace</b></h1>)
+    className='px-50 py-7 text-4xl'><b>OOPSS!!! No NFTs currently in the MarketPlace</b></h1>)
  
   return (
     <div className='flex justify-start'>
@@ -87,7 +87,7 @@ export default function Home() {
                   <img src={nft.image}/>
                   <div className='p-4'>
                     <p style={{height:'64px'}} className='text-3x1 font-semibold'>{nft.name}</p>
-                    <div style={{height: '20px' , overflow: 'hidden'}}>
+                    <div style={{height: '60px' , overflow: 'auto'}}>
                       <p className='text-black-400'><b>{nft.description}</b></p>
                       </div>
                     </div>

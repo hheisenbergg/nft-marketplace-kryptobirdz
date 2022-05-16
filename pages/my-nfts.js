@@ -59,7 +59,7 @@ export default function MyAssets() {
 
   
   if(loadingState === 'loaded' && !nfts.length) return (<h1
-    className='px-20 py-7 text-4x1'>You do not own any NFTs currently :(</h1>)
+    className='px-20 py-7 text-4xl'><b>You have not bought any NFTs from this marketplace yet :(</b></h1>)
  
   return (
     <div className='flex justify-start'>
@@ -71,7 +71,7 @@ export default function MyAssets() {
                   <img src={nft.image}/>
                   <div className='p-4'>
                     <p style={{height:'64px'}} className='text-3x1 font-semibold'>{nft.name}</p>
-                    <div style={{height: '25px' , overflow: 'hidden'}}>
+                    <div style={{height: '60px' , overflow: 'auto'}}>
                       <p className='text-black-400'><b>{nft.description}</b></p>
                       </div>
                     </div>

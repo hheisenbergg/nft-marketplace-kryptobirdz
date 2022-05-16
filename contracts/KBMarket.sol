@@ -119,7 +119,7 @@ contract KBMarket is ReentrancyGuard {
 
                require(msg.value == price , 'Please submit the listed price to continue');
 
-               //transferring the amount to the seller
+               //transferring the amount to the owner
                idToMarketToken[itemId].seller.transfer(msg.value);
 
                //transfer the NFT TO THE BUYER
